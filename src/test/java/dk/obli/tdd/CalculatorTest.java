@@ -47,5 +47,28 @@ class CalculatorTest {
         assertEquals(expected,actual);
     }
 
-    
+    @Test
+    @DisplayName("Test of add with string input")
+    void addStringInputTest(){
+        int actual = calculator.add("1,2,3");
+        int expected = 6;
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    @DisplayName("Test of add with int array")
+    void addIntArrayTest(){
+        int actual = calculator.add(new int[]{1,2,3});
+        int expected = 6;
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    @DisplayName("Test of add with more ints")
+    void addMultipleIntTest(){
+        int actual = calculator.add(1,2,3,4,5);
+        int expected = 15;
+        assertEquals(expected,actual);
+    }
+
 }
